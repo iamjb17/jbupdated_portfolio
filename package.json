@@ -1,0 +1,19 @@
+{
+  "name": "jbupdated_portfolio",
+  "version": "1.0.0",
+  "description": "Jessie's Portfolio Website",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamjb17/jbupdated_portfolio.git"
+  },
+  "author": "Jessie B",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iamjb17/jbupdated_portfolio/issues"
+  },
+  "homepage": "https://github.com/iamjb17/jbupdated_portfolio#readme"
+}
