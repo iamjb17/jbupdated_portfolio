@@ -1,0 +1,38 @@
+// config file for all of the variables and mixins
+
+// variables
+$primary-color: #444;
+$secondary-color: #eece1a;
+$show-home-image: true;
+$home-image: url(/dist/img/portBackground1.jpg);
+$background-opacity: 0.8;
+
+@mixin easeOut {
+    transition: all 0.75s ease-out;
+}
+
+@mixin background {
+    @if $show-home-image {
+        &#bg-img {
+            background: $home-image;
+            background-attachment: fixed;
+            background-size: cover;
+            
+            /*
+            Use this to create the overlay effect
+            Basically we are using a,:after, psuedo element, meaning its not really in the html but sass treats it like it is. and this fake element can come before or after something. in this case, after the bg img setting.
+            */
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                background: rgba($primary-color, $background-opacity);
+            }
+        }
+        
+    }
+}
